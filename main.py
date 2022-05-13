@@ -1,12 +1,20 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from transformers import pipeline
+from starlette.responses import RedirectResponse
+
 
 app = FastAPI()
 model = pipeline("sentiment-analysis")
 
 class PredictionRequest(BaseModel):
     query_string: str
+
+
+@app.get("/", include_in_schema=False)
+async def index():
+    return RedirectResponse(url="/docs")
+
 
 @app.get("/health")
 def health():
