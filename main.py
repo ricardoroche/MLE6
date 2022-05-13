@@ -21,7 +21,7 @@ def health():
     return "Service is online."
 
 
-@app.post("/endpoint")
+@app.post("/analyze")
 def endpoint(request: PredictionRequest):
     data = request.query_string
     result = model(data)
