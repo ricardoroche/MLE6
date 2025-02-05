@@ -1,6 +1,6 @@
 # Containerized Sentiment Analyzer
 
-![img/api.png]
+![FastAPI Docs](img/api.png)
 
 ## Instructions
 
