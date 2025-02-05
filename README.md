@@ -1,5 +1,7 @@
 # Containerized Sentiment Analyzer
 
+![img/api.png]
+
 ## Instructions
 
 1. Clone this repo:
@@ -12,7 +14,7 @@ cd containerized-sentiment-analyzer
 1. Build docker image:
 
 ```
-docker build -t <image_name>
+docker build -t <image_name> .
 ```
 
 2. Run docker container:
@@ -21,6 +23,6 @@ docker build -t <image_name>
 docker run --rm -dp 8000:8000 <image_name>
 ```
 
-3. Open application in browser: [`http://127.0.0.1:8000`](http://127.0.0.1:8000)
+3. Open application in browser: [`http://127.0.0.1:8000`](http://127.0.0.1:8000). This will open the FastAPI docs page.
 
 4. Submit a query string for sentiment analysis by navigating to the `analyze` endpoint and clicking on the 'Test it out' button.
